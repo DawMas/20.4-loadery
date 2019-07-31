@@ -2,12 +2,24 @@ import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
+import TodoList from '../components/TodoList';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: [{
+                id: 1,
+                text: 'clean room'
+            }, 
+            {
+                id: 2,
+                text: 'wash the dishes'
+            },
+            {
+                id: 3, 
+                text: 'feed my cat'
+            }]
         };
     }
     addTodo(val) {
@@ -30,6 +42,11 @@ class App extends React.Component {
                 <Title
                     title="Tytuł aplikacji "
                     taskNumber={this.state.data.length}
+                />
+                <TodoList 
+                    data={this.state.data}
+                    remove={this.removeTodo}
+
                 />
             </div>
         );
