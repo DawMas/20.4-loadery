@@ -1,0 +1,13 @@
+.TodoList{
+    background-color: #F5F5F5;
+    color: rgb(33, 39, 94);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
